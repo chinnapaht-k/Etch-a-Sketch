@@ -11,4 +11,14 @@ function createGrid(row,column){
     }
 }
 
+
 createGrid(32,32)
+
+const grids = document.querySelectorAll(".container div div")   
+grids.forEach((grid) => {
+
+    grid.addEventListener("mouseover",()=>{
+        grid.style.backgroundColor = "black";
+        console.log("hover");
+    });
+});
