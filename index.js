@@ -4,7 +4,7 @@ function createGrid(row,column){
         const rowDiv = document.createElement("div"); 
         for(let j = 0; j < column; j++){
             const columnDiv = document.createElement("div");
-            //columnDiv.textContent = "test" ;   
+            //columnDiv.textContent = "a" ;   
             rowDiv.appendChild(columnDiv);
         }
     container.appendChild(rowDiv);
@@ -12,7 +12,7 @@ function createGrid(row,column){
 }
 
 
-createGrid(32,32)
+createGrid(10,10)
 
 const grids = document.querySelectorAll(".container div div")   
 grids.forEach((grid) => {
