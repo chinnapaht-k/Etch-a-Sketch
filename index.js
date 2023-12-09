@@ -11,14 +11,33 @@ function createGrid(row,column){
     }
 }
 
-
-createGrid(10,10)
-
-const grids = document.querySelectorAll(".container div div")   
-grids.forEach((grid) => {
-
-    grid.addEventListener("mouseover",()=>{
-        grid.style.backgroundColor = "black";
-        console.log("hover");
+function addEventGrid(grids){
+    grids.forEach((grid) => {
+        grid.addEventListener("mouseover",()=>{
+            grid.style.backgroundColor = "black";
+            console.log("hover");
+        });
     });
-});
+    }
+    
+createGrid(10,10)
+const containers = document.querySelector(".container")
+const btn = document.querySelector("button")  
+let grids = document.querySelectorAll(".container div div")
+addEventGrid(grids)
+
+
+btn.addEventListener("click", ()=>{
+    let gridNumber;
+    while (true) {
+    gridNumber = parseInt(prompt("Enter your prefered grid number (Min:1, Max:100):"));
+    if (gridNumber < 1 || gridNumber > 100) alert("You enter the nubmer that exceed minimum or maximum. Pls try again");
+    else break;
+    }
+    containers.textContent = '';
+    createGrid(gridNumber,gridNumber);
+    grids = document.querySelectorAll(".container div div")
+    addEventGrid(grids)
+})
+
+
