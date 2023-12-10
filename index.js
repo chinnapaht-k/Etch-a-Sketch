@@ -18,19 +18,19 @@ function addEventGrid(grids){
             const g = Math.floor(Math.random() * 257) 
             const b = Math.floor(Math.random() * 257) 
             grid.style.cssText = `background-color: rgb(${r},${g},${b});`  
-            console.log("hover");
         });
     });
     }
     
-createGrid(10,10)
+createGrid(16,16)
 const containers = document.querySelector(".container")
-const btn = document.querySelector("button")  
+const btnCreate = document.querySelector("button#create-grid")  
+const btnClear = document.querySelector("button#clear-grid")  
 let grids = document.querySelectorAll(".container div div")
 addEventGrid(grids)
 
 
-btn.addEventListener("click", ()=>{
+btnCreate.addEventListener("click", ()=>{
     let gridNumber;
     while (true) {
     gridNumber = parseInt(prompt("Enter your prefered grid number (Min:1, Max:100):"));
@@ -44,3 +44,9 @@ btn.addEventListener("click", ()=>{
 })
 
 
+btnClear.addEventListener("click",()=>{
+    grids = document.querySelectorAll(".container div div")
+    grids.forEach((grid) => {
+        grid.style.cssText = "background-color:none";
+    })
+})

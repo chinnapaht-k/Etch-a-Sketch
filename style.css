@@ -35,5 +35,8 @@ button {
     border-radius: 8px;
     font-size : 20px;
     font-family: 'Dancing Script', cursive, sans-serif;
+}
 
+h1 {
+    margin : 10px;
 }
