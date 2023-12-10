@@ -14,7 +14,10 @@ function createGrid(row,column){
 function addEventGrid(grids){
     grids.forEach((grid) => {
         grid.addEventListener("mouseover",()=>{
-            grid.style.backgroundColor = "black";
+            const r = Math.floor(Math.random() * 257) 
+            const g = Math.floor(Math.random() * 257) 
+            const b = Math.floor(Math.random() * 257) 
+            grid.style.cssText = `background-color: rgb(${r},${g},${b});`  
             console.log("hover");
         });
     });

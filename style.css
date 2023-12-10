@@ -1,3 +1,14 @@
+body {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Dancing Script', cursive, sans-serif;
+    font-size : 30px;
+    color : white;
+    background-color: #696969;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -15,5 +26,14 @@
 .container div div {
     flex: auto ;
     border: 1px solid black;
-
 }   
+
+button {
+    width : 200px;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    font-size : 20px;
+    font-family: 'Dancing Script', cursive, sans-serif;
+
+}
